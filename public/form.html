@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Úrlapkezelés</title>
+    <style>
+        .form-container {
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <fieldset>
+            <legend>Konyv</legend>
+            <form action="" id="userForm">
+                <p>
+                    <label for="cim">Cim:</label>
+                    <input type="text" name="cim" id="cim" placeholder="Cím megadása.." required>
+                </p>
+                <p>
+                    <label for="szerzo">Szerző:</label>
+                    <input type="text" name="szerzo" id="szerzo" placeholder="Szerző megadása.." required>
+                </p>
+                <p>
+                    <label for="kiado">Kiadó</label>
+                    <input type="text" name="kiado" id="kiado" placeholder="Kiadó megadása.." required>
+                </p>
+                <p>
+                    <label for="kiadasi_ev">Kiadási Év:</label>
+                    <input type="date" name="kiadasi_ev" id="kiadasi_ev" placeholder="Kiadási Év megadása.." required>
+                </p>
+                <p>
+                    <label for="isbn">isbn</label>
+                    <input type="text" name="isbn" id="isbn" placeholder="ISBN megadása.." required>
+                </p>
+
+                <p>
+                    <button type="submit">Elküld</button>
+                </p>
+            </form>
+        </fieldset>
+        <h3>LocalStorage adatok megjelenítése</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Könyv ID</th>
+                    <th>Cím</th>
+                    <th>Szerző</th>
+                    <th>Kiadó</th>
+                    <th>Kiadási Év</th>
+                    <th>ISBN</th>
+                </tr>
+            </thead>
+            <tbody id="usersTable"><!--Ide jönnek az adatok--></tbody>
+        </table>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>
